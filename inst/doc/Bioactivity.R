@@ -1,3 +1,6 @@
+params <-
+list(my_css = "css/rmdformats.css")
+
 ## ----include = FALSE----------------------------------------------------------
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -10,6 +13,7 @@ start_vignette("4")
 if (!library(ctxR, logical.return = TRUE)){
   devtools::load_all()
 }
+old_options <- options("width")
 
 ## ----setup-print, echo = FALSE------------------------------------------------
 # Redefining the knit_print method to truncate character values to 25 characters
@@ -31,24 +35,25 @@ registerS3method(
   "knit_print", "data.table", knit_print.data.table,
   envir = asNamespace("knitr")
 )
-# helper function for printing
-printFormattedTable <- function(res_dt, widen = c()) {
-  DT::datatable(res_dt, style = 'bootstrap', class = 'table-bordered table-condensed', rownames = FALSE, options = list(scrollX = TRUE, autoWidth = TRUE, dom = 't', columnDefs = list(list(width = '1250px', targets = widen))))
-}
+
 
 ## ----ctxR annotation by aeid, message=FALSE-----------------------------------
 assay <- get_annotation_by_aeid(AEID = "891")
 
 ## ----echo=FALSE---------------------------------------------------------------
-printFormattedTable(assay, c(4, 18, 33, 51)) # printed using custom formatted table
+knitr::kable(head(assay))%>% 
+ kableExtra::kable_styling("striped") %>% 
+ kableExtra::scroll_box(width = "100%")
 
 ## ----ctxR annotation by aeid batch, message=FALSE-----------------------------
 assays <- get_annotation_by_aeid_batch(AEID = c(759,700,891))
 # return is in list form by aeid, convert to table for output
 assays <- data.table::rbindlist(assays)
 
-## ----ctxR-all-assays, message=FALSE, eval=FALSE-------------------------------
-#  printFormattedTable(assays, c(4, 18, 19, 33, 51)) # printed using custom formatted table
+## ----echo=FALSE---------------------------------------------------------------
+knitr::kable(head(assays))%>% 
+ kableExtra::kable_styling("striped") %>% 
+ kableExtra::scroll_box(width = "100%", height="400px")
 
 ## ----ctxR all assays, message=FALSE, eval=FALSE-------------------------------
 #  all_assays <- get_all_assays()
@@ -57,46 +62,51 @@ assays <- data.table::rbindlist(assays)
 summary <- get_bioactivity_summary(AEID = "891")
 
 ## ----echo=FALSE---------------------------------------------------------------
-printFormattedTable(summary) # printed using custom formatted table
+knitr::kable(head(summary))%>% 
+ kableExtra::kable_styling("striped") %>% 
+ kableExtra::scroll_box(width = "100%")
 
-## ----ctxR summary by aeid batch, message=FALSE--------------------------------
+## ----ctxR summary by aeid batch, message=FALSE, results= FALSE----------------
 summary <- get_bioactivity_summary_batch(AEID = c(759,700,891))
-summary <- data.table::rbindlist(summary)
-
-## ----echo=FALSE---------------------------------------------------------------
-printFormattedTable(summary) # printed using custom formatted table
 
 ## ----ctxR data by spid, message=FALSE, results = FALSE------------------------
 # By spid
 spid_data <- get_bioactivity_details(SPID = 'TP0000904H05')
 
 ## ----echo=FALSE---------------------------------------------------------------
-printFormattedTable(head(spid_data), c(ncol(spid_data)-2)) # printed using custom formatted table
+knitr::kable(head(spid_data))%>% 
+ kableExtra::kable_styling("striped") %>% 
+ kableExtra::scroll_box(width = "100%", height="400px")
 
 ## ----ctxR data by m4id, message=FALSE, results = FALSE------------------------
 # By m4id
 m4id_data <- get_bioactivity_details(m4id = 739695)
 
 ## ----echo=FALSE---------------------------------------------------------------
-printFormattedTable(m4id_data, c(ncol(m4id_data) - 2)) # printed using custom formatted table
+knitr::kable(head(m4id_data))%>% 
+ kableExtra::kable_styling("striped") %>% 
+ kableExtra::scroll_box(width = "100%", height="400px")
 
 ## ----ctxR data by dtxsid, message=FALSE, results = FALSE----------------------
 # By DTXSID
 dtxsid_data <- get_bioactivity_details(DTXSID = "DTXSID30944145")
 
 ## ----echo=FALSE---------------------------------------------------------------
-printFormattedTable(dtxsid_data, c(ncol(dtxsid_data)-2)) # printed using custom formatted table
+knitr::kable(head(dtxsid_data))%>% 
+ kableExtra::kable_styling("striped") %>% 
+ kableExtra::scroll_box(width = "100%", height="400px")
 
 ## ----ctxR data by aeid, message=FALSE, results = FALSE------------------------
 # By aeid
 aeid_data <- get_bioactivity_details(AEID = 704)
 
 ## ----echo=FALSE---------------------------------------------------------------
-printFormattedTable(head(aeid_data), c(ncol(aeid_data)-2)) # printed using custom formatted table
+knitr::kable(head(aeid_data))%>% 
+ kableExtra::kable_styling("striped") %>% 
+ kableExtra::scroll_box(width = "100%",  height="400px")
 
 ## ----ctxR data by aeid batch, message=FALSE, eval=FALSE-----------------------
 #  aeid_data_batch <- get_bioactivity_details_batch(AEID = c(759,700,891))
-#  aeid_data_batch <- data.table::rbindlist(aeid_data_batch, fill = TRUE)
 
 ## ----breakdown, echo = FALSE, results = 'hide'--------------------------------
 # This chunk will be hidden in the final product. It serves to undo defining the
@@ -109,6 +119,8 @@ registerS3method(
   "knit_print", "data.table", knit_print.data.table,
   envir = asNamespace("knitr")
 )
+
+options(old_options)
 
 ## ----include=FALSE------------------------------------------------------------
 end_vignette()

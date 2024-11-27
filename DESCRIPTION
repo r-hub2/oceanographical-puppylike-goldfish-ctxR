@@ -1,7 +1,7 @@
 Type: Package
 Package: ctxR
 Title: Utilities for Interacting with the 'CTX' APIs
-Version: 1.0.0
+Version: 1.0.0.9000
 Authors@R: c(
             person("Paul", "Kruse", email = "kruse.paul@epa.gov", 
               role = c("aut", "cre"), 
@@ -19,11 +19,11 @@ Authors@R: c(
     	        )
 Description: Access chemical, hazard, bioactivity, and exposure data from the 
    Computational Toxicology and Exposure ('CTX') APIs 
-   <https://api-ccte.epa.gov/docs/>. 'ctxR' was developed to streamline the 
-   process of accessing the information available through the 'CTX' APIs 
-   without requiring prior knowledge of how to use APIs. Most data is also 
-   available on the CompTox Chemical Dashboard ('CCD') 
-   <https://comptox.epa.gov/dashboard/> and other resources found at the 
+   <https://www.epa.gov/comptox-tools/computational-toxicology-and-exposure-apis>. 
+   'ctxR' was developed to streamline the process of accessing the information 
+   available through the 'CTX' APIs without requiring prior knowledge of how to 
+   use APIs. Most data is also available on the CompTox Chemical Dashboard 
+   ('CCD') <https://comptox.epa.gov/dashboard/> and other resources found at the 
    EPA Computational Toxicology and Exposure Online Resources 
    <https://www.epa.gov/comptox-tools>. 
 License: GPL (>= 3)
@@ -33,15 +33,16 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.1
-Suggests: countcolors, devtools, DT, ggplot2, gridExtra, httptest,
-        knitr, prettydoc, rmarkdown, testthat (>= 3.0.0), XML
-URL: https://github.com/USEPA/ctxR
+Suggests: countcolors, devtools, DT, ggplot2, gridExtra, htmlTable,
+        httptest, kableExtra, knitr, prettydoc, rmarkdown, rmdformats,
+        testthat (>= 3.0.0), XML
+URL: https://github.com/USEPA/ctxR, https://usepa.github.io/ctxR/
 BugReports: https://github.com/USEPA/ctxR/issues
 VignetteBuilder: knitr
 Config/testthat/edition: 3
 Depends: R (>= 2.10)
 NeedsCompilation: no
-Packaged: 2024-06-28 21:33:42 UTC; PKRUSE
+Packaged: 2024-11-27 19:09:09 UTC; PKRUSE
 Author: Paul Kruse [aut, cre] (<https://orcid.org/0000-0001-5516-9717>),
   Caroline Ring [aut] (<https://orcid.org/0000-0002-0463-1251>),
   Madison Feshuk [ctb] (<https://orcid.org/0000-0002-1390-6405>),

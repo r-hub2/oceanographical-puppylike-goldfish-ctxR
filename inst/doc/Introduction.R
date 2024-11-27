@@ -1,3 +1,6 @@
+params <-
+list(my_css = "css/rmdformats.css")
+
 ## ----include = FALSE----------------------------------------------------------
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -48,10 +51,10 @@ start_vignette("1")
 
 ## ----register-ctxR, eval=FALSE------------------------------------------------
 #  # This stores the key in the current session
-#  register_ctxR(key = '<YOUR API KEY>')
+#  register_ctx_api_key(key = '<YOUR API KEY>')
 #  
 #  # This stores the key across multiple sessions and only needs to be run once. If the key changes, rerun this with the new key.
-#  register_ctxR(key = '<YOUR API KEY>', write = TRUE)
+#  register_ctx_api_key(key = '<YOUR API KEY>', write = TRUE)
 
 ## ----display-hide-key---------------------------------------------------------
 #  # To show the API key
@@ -66,56 +69,84 @@ start_vignette("1")
 #  ctx_key()
 
 ## ----bpa-chem-details---------------------------------------------------------
-#  bpa_details <- get_chemical_details(DTXSID = 'DTXSID7020182',
-#                                      API_key = my_key)
-#  bpa_details <- data.table::as.data.table(bpa_details)
-#  head(bpa_details)
+#  bpa_details <- get_chemical_details(DTXSID = 'DTXSID7020182')
+
+## ----echo=FALSE---------------------------------------------------------------
+#  htmlTable::htmlTable(head(bpa_details),
+#          align = 'l',
+#          align.header = 'l',
+#          rnames = FALSE  ,
+#          css.cell =  ' padding-bottom: 5px;  vertical-align:top; padding-right: 10px;min-width: 5em ')
 
 ## ----bpa-chem-info------------------------------------------------------------
-#  bpa_info <- get_chem_info(DTXSID = "DTXSID7020182",
-#                            API_key = my_key)
-#  bpa_info <- data.table::as.data.table(bpa_info)
-#  
-#  head(bpa_info)
+#  bpa_info <- get_chem_info(DTXSID = "DTXSID7020182")
+
+## ----echo=FALSE---------------------------------------------------------------
+#  htmlTable::htmlTable(head(bpa_info),
+#          align = 'l',
+#          align.header = 'l',
+#          rnames = FALSE  ,
+#          css.cell =  ' padding-bottom: 5px;  vertical-align:top; padding-right: 10px;min-width: 5em ')
 
 ## ----bpa-experimental---------------------------------------------------------
-#  bpa_info_experimental <- get_chem_info(DTXSID = "DTXSID7020182",
-#                                         type = 'experimental',
-#                                         API_key = my_key)
-#  bpa_info_experimental <- data.table::as.data.table(bpa_info_experimental)
-#  
-#  head(bpa_info_experimental)
+#  bpa_info_experimental <- get_chem_info(DTXSID = "DTXSID7020182", type = 'experimental')
+
+## ----echo=FALSE---------------------------------------------------------------
+#  htmlTable::htmlTable(head(bpa_info_experimental),
+#          align = 'l',
+#          align.header = 'l',
+#          rnames = FALSE  ,
+#          css.cell =  ' padding-bottom: 5px;  vertical-align:top; padding-right: 10px;min-width: 5em ')
 
 ## ----hazard-------------------------------------------------------------------
-#  bpa_hazard <- get_hazard_by_dtxsid(DTXSID = 'DTXSID7020182',
-#                                     API_key = my_key)
-#  bpa_hazard <- data.table::as.data.table(bpa_hazard)
-#  head(bpa_hazard)
+#  bpa_hazard <- get_hazard_by_dtxsid(DTXSID = 'DTXSID7020182')
+
+## ----echo=FALSE---------------------------------------------------------------
+#  htmlTable::htmlTable(head(bpa_hazard_info),
+#          align = 'l',
+#          align.header = 'l',
+#          rnames = FALSE  ,
+#          css.cell =  ' padding-bottom: 5px;  vertical-align:top; padding-right: 10px;min-width: 5em ')
 
 ## ----human-hazard-------------------------------------------------------------
-#  bpa_human_hazard <- get_human_hazard_by_dtxsid(DTXSID = 'DTXSID7020182',
-#                                                 API_key = my_key)
-#  bpa_human_hazard <- data.table::as.data.table(bpa_human_hazard)
-#  head(bpa_human_hazard)
+#  bpa_human_hazard <- get_human_hazard_by_dtxsid(DTXSID = 'DTXSID7020182')
+
+## ----echo=FALSE---------------------------------------------------------------
+#  htmlTable::htmlTable(head(bpa_human_hazard),
+#          align = 'l',
+#          align.header = 'l',
+#          rnames = FALSE  ,
+#          css.cell =  ' padding-bottom: 5px;  vertical-align:top; padding-right: 10px;min-width: 5em ')
 
 ## ----ecotox-hazard------------------------------------------------------------
-#  bpa_eco_hazard <- get_ecotox_hazard_by_dtxsid(DTXSID = 'DTXSID7020182',
-#                                                API_key = my_key)
-#  bpa_eco_hazard <- data.table::as.data.table(bpa_eco_hazard)
-#  head(bpa_eco_hazard)
+#  bpa_eco_hazard <- get_ecotox_hazard_by_dtxsid(DTXSID = 'DTXSID7020182')
+
+## ----echo=FALSE---------------------------------------------------------------
+#  htmlTable::htmlTable(head(bpa_eco_hazard),
+#          align = 'l',
+#          align.header = 'l',
+#          rnames = FALSE  ,
+#          css.cell =  ' padding-bottom: 5px;  vertical-align:top; padding-right: 10px;min-width: 5em ')
 
 ## ----bioactivity-dtxsid-------------------------------------------------------
-#  bpa_bioactivity <- get_bioactivity_details(DTXSID = 'DTXSID7020182',
-#                                             API_key = my_key)
-#  
-#  bpa_bioactivity <- data.table::as.data.table(bpa_bioactivity)
-#  head(bpa_bioactivity)
+#  bpa_bioactivity <- get_bioactivity_details(DTXSID = 'DTXSID7020182')
+
+## ----echo=FALSE---------------------------------------------------------------
+#  htmlTable::htmlTable(head(bpa_bioactivity),
+#          align = 'l',
+#          align.header = 'l',
+#          rnames = FALSE  ,
+#          css.cell =  ' padding-bottom: 5px;  vertical-align:top; padding-right: 10px;min-width: 5em ')
 
 ## ----bioactivity-aeid---------------------------------------------------------
-#  assay_id_search <- get_bioactivity_details(AEID = 42,
-#                                             API_key = my_key)
-#  assay_id_search <- data.table::as.data.table(assay_id_search)
-#  head(assay_id_search)
+#  assay_id_search <- get_bioactivity_details(AEID = 42)
+
+## ----echo=FALSE---------------------------------------------------------------
+#  htmlTable::htmlTable(head(assay_id_search),
+#          align = 'l',
+#          align.header = 'l',
+#          rnames = FALSE  ,
+#          css.cell =  ' padding-bottom: 5px;  vertical-align:top; padding-right: 10px;min-width: 5em ')
 
 ## ----breakdown, echo = FALSE, results = 'hide'--------------------------------
 #  # This chunk will be hidden in the final product. It serves to undo defining the

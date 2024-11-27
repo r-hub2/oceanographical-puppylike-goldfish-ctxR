@@ -1,3 +1,6 @@
+params <-
+list(my_css = "css/rmdformats.css")
+
 ## ----include = FALSE----------------------------------------------------------
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -34,25 +37,25 @@ registerS3method(
 )
 
 ## ----ctxR all hazard, message=FALSE, eval=FALSE-------------------------------
-#  res_dt <- get_hazard_by_dtxsid(DTXSID = 'DTXSID7020182')
+#  hazard_by_dtxsid <- get_hazard_by_dtxsid(DTXSID = 'DTXSID7020182')
 
 ## ----ctxR human hazard, message=FALSE, eval=FALSE-----------------------------
-#  res_dt <- get_human_hazard_by_dtxsid(DTXSID = 'DTXSID7020182')
+#  human_hazard_by_dtxsid <- get_human_hazard_by_dtxsid(DTXSID = 'DTXSID7020182')
 
 ## ----ctxR ecotox hazard, message=FALSE, eval=FALSE----------------------------
-#  res_dt <- get_ecotox_hazard_by_dtxsid(DTXSID = 'DTXSID7020182')
+#  ecotox_hazard_by_dtxsid <- get_ecotox_hazard_by_dtxsid(DTXSID = 'DTXSID7020182')
 
 ## ----ctxR skin and eye hazard, message=FALSE, eval=FALSE----------------------
-#  res_dt <- get_skin_eye_hazard(DTXSID = 'DTXSID7020182')
+#  skin_eye_hazard <- get_skin_eye_hazard(DTXSID = 'DTXSID7020182')
 
 ## ----ctxR cancer hazard, message=FALSE, eval=FALSE----------------------------
-#  res_dt <- get_cancer_hazard(DTXSID = 'DTXSID7020182')
+#  cancer_hazard <- get_cancer_hazard(DTXSID = 'DTXSID7020182')
 
 ## ----ctxR genetox summary hazard, message=FALSE, eval=FALSE-------------------
-#  res_dt <- get_genetox_summary(DTXSID = 'DTXSID7020182')
+#  genetox_summary <- get_genetox_summary(DTXSID = 'DTXSID7020182')
 
 ## ----ctxR genetox detail hazard, message=FALSE, eval=FALSE--------------------
-#  res_dt <- get_genetox_details(DTXSID = 'DTXSID7020182')
+#  genetox_details <- get_genetox_details(DTXSID = 'DTXSID7020182')
 
 ## -------------------------------------------------------------------------------------------------
 options(width = 100)

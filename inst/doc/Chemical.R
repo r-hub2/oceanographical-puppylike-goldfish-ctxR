@@ -42,99 +42,99 @@ registerS3method(
 )
 
 ## ----ctxR dtxsid data chemical, message=FALSE, eval=FALSE---------------------
-#  chemical_details_by_dtxsid <- get_chemical_details(DTXSID = 'DTXSID7020182')
+# chemical_details_by_dtxsid <- get_chemical_details(DTXSID = 'DTXSID7020182')
 
 ## ----ctxR dtxcid data chemical, message=FALSE, eval=FALSE---------------------
-#  chemical_details_by_dtxcid <- get_chemical_details(DTXCID = 'DTXCID30182')
+# chemical_details_by_dtxcid <- get_chemical_details(DTXCID = 'DTXCID30182')
 
 ## ----ctxR batch data chemical, message=FALSE, eval=FALSE----------------------
-#  vector_dtxsid<- c("DTXSID7020182", "DTXSID9020112", "DTXSID8021430")
-#  chemical_details_by_batch_dtxsid <- get_chemical_details_batch(DTXSID = vector_dtxsid)
-#  
-#  vector_dtxcid <- c("DTXCID30182", "DTXCID801430", "DTXCID90112")
-#  chemical_details_by_batch_dtxcid <- get_chemical_details_batch(DTXCID = vector_dtxcid)
+# vector_dtxsid<- c("DTXSID7020182", "DTXSID9020112", "DTXSID8021430")
+# chemical_details_by_batch_dtxsid <- get_chemical_details_batch(DTXSID = vector_dtxsid)
+# 
+# vector_dtxcid <- c("DTXCID30182", "DTXCID801430", "DTXCID90112")
+# chemical_details_by_batch_dtxcid <- get_chemical_details_batch(DTXCID = vector_dtxcid)
 
 ## ----ctxr dtxsid check, message=FALSE, eval=FALSE-----------------------------
-#  dtxsid_check_true <- check_existence_by_dtxsid(DTXSID = 'DTXSID7020182')
-#  dtxsid_check_false <- check_existence_by_dtxsid(DTXSID = 'DTXSID7020182f')
+# dtxsid_check_true <- check_existence_by_dtxsid(DTXSID = 'DTXSID7020182')
+# dtxsid_check_false <- check_existence_by_dtxsid(DTXSID = 'DTXSID7020182f')
 
 ## ----ctxr dtxsid check batch, message=FALSE, eval=FALSE-----------------------
-#  vector_dtxsid_and_non_dtxsid <- c('DTXSID7020182F', 'DTXSID7020182', 'DTXSID0020232F')
-#  dtxsid_checks <- check_existence_by_dtxsid_batch(DTXSID = vector_dtxsid_and_non_dtxsid)
+# vector_dtxsid_and_non_dtxsid <- c('DTXSID7020182F', 'DTXSID7020182', 'DTXSID0020232F')
+# dtxsid_checks <- check_existence_by_dtxsid_batch(DTXSID = vector_dtxsid_and_non_dtxsid)
 
 ## ----ctxR property range chemical, message=FALSE, eval=FALSE------------------
-#  chemical_by_property_range <- get_chemical_by_property_range(start = 1.311,
-#                                           end = 1.313,
-#                                           property = 'Density')
+# chemical_by_property_range <- get_chemical_by_property_range(start = 1.311,
+#                                          end = 1.313,
+#                                          property = 'Density')
 
 ## ----ctxR info chemical, message=FALSE, eval=FALSE----------------------------
-#  chemical_info <- get_chem_info(DTXSID = 'DTXSID7020182')
+# chemical_info <- get_chem_info(DTXSID = 'DTXSID7020182')
 
 ## ----ctxR fate data chemical, message=FALSE, eval=FALSE-----------------------
-#  fate_by_dtxsid <- get_fate_by_dtxsid(DTXSID = 'DTXSID7020182')
+# fate_by_dtxsid <- get_fate_by_dtxsid(DTXSID = 'DTXSID7020182')
 
 ## ----ctxR starting value chemical, message=FALSE, eval=FALSE------------------
-#  search_starts_with <- chemical_starts_with(word = 'DTXSID70201')
+# search_starts_with <- chemical_starts_with(word = 'DTXSID70201')
 
 ## ----ctxR exact value chemical, message=FALSE, eval=FALSE---------------------
-#  search_exact <- chemical_equal(word = 'DTXSID7020182')
+# search_exact <- chemical_equal(word = 'DTXSID7020182')
 
 ## ----ctxR substring value chemical, message=FALSE, eval=FALSE-----------------
-#  search_contains <- chemical_contains(word = 'DTXSID702018')
+# search_contains <- chemical_contains(word = 'DTXSID702018')
 
 ## ----ctxR mass range ms ready chemical, message=FALSE, eval=FALSE-------------
-#  msready_by_mass <- get_msready_by_mass(start = 200.9,
-#                                end = 200.95)
+# msready_by_mass <- get_msready_by_mass(start = 200.9,
+#                               end = 200.95)
 
 ## ----ctxR chemical formula ms ready chemical, message=FALSE, eval=FALSE-------
-#  msready_by_formula <- get_msready_by_formula(formula = 'C16H24N2O5S')
+# msready_by_formula <- get_msready_by_formula(formula = 'C16H24N2O5S')
 
 ## ----ctxR dtxcid ms ready chemical, message=FALSE, eval=FALSE-----------------
-#  msready_by_dtxcid <- get_msready_by_dtxcid(DTXCID = 'DTXCID30182')
+# msready_by_dtxcid <- get_msready_by_dtxcid(DTXCID = 'DTXCID30182')
 
 ## ----ctxR types of chemical lists, message=FALSE, eval=FALSE------------------
-#  get_all_list_types()
+# get_all_list_types()
 
 ## ----ctxR all list types chemical, message=FALSE, eval=FALSE------------------
-#  chemical_lists_by_type <- get_chemical_lists_by_type(type =  'federal')
+# chemical_lists_by_type <- get_chemical_lists_by_type(type =  'federal')
 
 ## ----ctxR list by name chemical, message=FALSE, eval=FALSE--------------------
-#  public_chemical_list_by_name <- get_public_chemical_list_by_name(listname = 'CCL4')
+# public_chemical_list_by_name <- get_public_chemical_list_by_name(listname = 'CCL4')
 
 ## ----ctxR lists containing chemical, message=FALSE, eval=FALSE----------------
-#  lists_containing_chemical <- get_lists_containing_chemical(DTXSID = 'DTXSID7020182')
+# lists_containing_chemical <- get_lists_containing_chemical(DTXSID = 'DTXSID7020182')
 
 ## ----ctxR chemicals-in-list-start, message=FALSE, eval=FALSE------------------
-#  chemicals_in_ccl4_start <- get_chemicals_in_list_start(list_name = 'CCL4', word = 'Bi')
+# chemicals_in_ccl4_start <- get_chemicals_in_list_start(list_name = 'CCL4', word = 'Bi')
 
 ## ----ctxR chemicals-in-list-exact, message=FALSE, eval=FALSE------------------
-#  chemicals_in_ccl4_exact <- get_chemicals_in_list_exact(list_name = 'BIOSOLIDS2021', word = 'Bisphenol A')
+# chemicals_in_ccl4_exact <- get_chemicals_in_list_exact(list_name = 'BIOSOLIDS2021', word = 'Bisphenol A')
 
 ## ----ctxR chemicals-in-list-contain, message=FALSE, eval=FALSE----------------
-#  chemicals_in_ccl4_contain <- get_chemicals_in_list_contain(list_name = 'CCL4', word = 'Bis')
+# chemicals_in_ccl4_contain <- get_chemicals_in_list_contain(list_name = 'CCL4', word = 'Bis')
 
 ## ----ctxR chemical in list chemical, message=FALSE, eval=FALSE----------------
-#  chemicals_in_list <- get_chemicals_in_list(list_name = 'CCL4')
+# chemicals_in_list <- get_chemicals_in_list(list_name = 'CCL4')
 
 ## ----ctxR mrv by dtxsid dtxcid chemical, message=FALSE, eval=FALSE------------
-#  chemical_mrv_by_dtxsid <- get_chemical_mrv(DTXSID = 'DTXSID7020182')
-#  chemical_mrv_by_dtxcid <- get_chemical_mrv(DTXCID = 'DTXCID30182')
+# chemical_mrv_by_dtxsid <- get_chemical_mrv(DTXSID = 'DTXSID7020182')
+# chemical_mrv_by_dtxcid <- get_chemical_mrv(DTXCID = 'DTXCID30182')
 
 ## ----ctxR mol by dtxsid dtxcid chemical, message=FALSE, eval=FALSE------------
-#  chemical_mol_by_dtxsid <- get_chemical_mol(DTXSID = 'DTXSID7020182')
-#  chemical_mol_by_dtxcid <- get_chemical_mol(DTXCID = 'DTXCID30182')
+# chemical_mol_by_dtxsid <- get_chemical_mol(DTXSID = 'DTXSID7020182')
+# chemical_mol_by_dtxcid <- get_chemical_mol(DTXCID = 'DTXCID30182')
 
 ## ----ctxR image by dtxsid dtxcid chemical, message=FALSE, eval=FALSE----------
-#  chemical_image_by_dtxsid <- get_chemical_image(DTXSID = 'DTXSID7020182')
-#  chemical_image_by_dtxcid <- get_chemical_image(DTXCID = 'DTXCID30182')
-#  chemical_image_by_smiles <- get_chemical_image(SMILES = 'CC(C)(C1=CC=C(O)C=C1)C1=CC=C(O)C=C1')
-#  
-#  countcolors::plotArrayAsImage(chemical_image_by_dtxsid)
-#  countcolors::plotArrayAsImage(chemical_image_by_dtxcid)
-#  countcolors::plotArrayAsImage(chemical_image_by_smiles)
+# chemical_image_by_dtxsid <- get_chemical_image(DTXSID = 'DTXSID7020182')
+# chemical_image_by_dtxcid <- get_chemical_image(DTXCID = 'DTXCID30182')
+# chemical_image_by_smiles <- get_chemical_image(SMILES = 'CC(C)(C1=CC=C(O)C=C1)C1=CC=C(O)C=C1')
+# 
+# countcolors::plotArrayAsImage(chemical_image_by_dtxsid)
+# countcolors::plotArrayAsImage(chemical_image_by_dtxcid)
+# countcolors::plotArrayAsImage(chemical_image_by_smiles)
 
 ## ----ctxR synonym by dtxsid chemical, message=FALSE, eval=FALSE---------------
-#  chemical_synonym <- get_chemical_synonym(DTXSID = 'DTXSID7020182')
+# chemical_synonym <- get_chemical_synonym(DTXSID = 'DTXSID7020182')
 
 ## -------------------------------------------------------------------------------------------------
 options(width = 100)
@@ -152,18 +152,18 @@ natadb <- get_chemicals_in_list('NATADB')
 natadb <- data.table::as.data.table(natadb)
 
 ## ----eval=FALSE-----------------------------------------------------------------------------------
-#  dim(ccl4)
-#  dim(natadb)
-#  colnames(ccl4)
-#  head(ccl4, 1)
+# dim(ccl4)
+# dim(natadb)
+# colnames(ccl4)
+# head(ccl4, 1)
 
 ## -------------------------------------------------------------------------------------------------
 ccl4_phys_chem <- get_chem_info_batch(ccl4$dtxsid)
 natadb_phys_chem <- get_chem_info_batch(natadb$dtxsid)
 
 ## ----eval=FALSE-----------------------------------------------------------------------------------
-#  dim(ccl4_phys_chem)
-#  colnames(ccl4_phys_chem)
+# dim(ccl4_phys_chem)
+# colnames(ccl4_phys_chem)
 
 ## -------------------------------------------------------------------------------------------------
 ccl4_phys_chem[, unique(propertyId)]
@@ -179,15 +179,15 @@ ccl4_phys_chem[propertyId == 'melting-point', .(Mean = mean(value)),
                by = .(propType)]
 
 ## ----fig.align='center',class.source="scroll-300",message=FALSE-----------------------------------
-head(ccl4_phys_chem[dtxsid == ccl4$dtxsid[[1]], ])
-ccl4_phys_chem[dtxsid == ccl4$dtxsid[[1]], .(propType, value, unit),
+head(ccl4_phys_chem[dtxsid == ccl4$dtxsid[[25]], ])
+ccl4_phys_chem[dtxsid == ccl4$dtxsid[[25]], .(propType, value, unit),
                by = .(propertyId)]
-ccl4_phys_chem[dtxsid == ccl4$dtxsid[[1]], .(value, unit), 
+ccl4_phys_chem[dtxsid == ccl4$dtxsid[[25]], .(value, unit), 
                by = .(propertyId, propType)]
 
-ccl4_phys_chem[dtxsid == ccl4$dtxsid[[1]], .(Mean_value = sapply(.SD, mean)),
+ccl4_phys_chem[dtxsid == ccl4$dtxsid[[25]], .(Mean_value = sapply(.SD, mean)),
                by = .(propertyId, unit), .SDcols = c("value")]
-ccl4_phys_chem[dtxsid == ccl4$dtxsid[[1]], .(Mean_value = sapply(.SD, mean)), 
+ccl4_phys_chem[dtxsid == ccl4$dtxsid[[25]], .(Mean_value = sapply(.SD, mean)), 
                by = .(propertyId, unit, propType), 
                .SDcols = c("value")][order(propertyId)]
 
@@ -224,17 +224,17 @@ natadb_vapor_grouped[, log_transform_mean_vapor_pressure :=
                        log(mean_vapor_pressure)]
 
 ## ----fig.align='center', echo=FALSE, eval=FALSE---------------------------------------------------
-#  ggplot(ccl4_vapor_all, aes(log_transform_mean_vapor_pressure)) +
-#    geom_boxplot() +
-#    coord_flip()
-#  ggplot(ccl4_vapor_grouped, aes(propType, log_transform_mean_vapor_pressure)) +
-#    geom_boxplot()
+# ggplot(ccl4_vapor_all, aes(log_transform_mean_vapor_pressure)) +
+#   geom_boxplot() +
+#   coord_flip()
+# ggplot(ccl4_vapor_grouped, aes(propType, log_transform_mean_vapor_pressure)) +
+#   geom_boxplot()
 
 ## ----fig.align='center', echo=FALSE, eval=FALSE---------------------------------------------------
-#  ggplot(natadb_vapor_all, aes(log_transform_mean_vapor_pressure)) +
-#    geom_boxplot() + coord_flip()
-#  ggplot(natadb_vapor_grouped, aes(propType, log_transform_mean_vapor_pressure)) +
-#    geom_boxplot()
+# ggplot(natadb_vapor_all, aes(log_transform_mean_vapor_pressure)) +
+#   geom_boxplot() + coord_flip()
+# ggplot(natadb_vapor_grouped, aes(propType, log_transform_mean_vapor_pressure)) +
+#   geom_boxplot()
 
 ## ----fig.align='center',class.source="scroll-300",message=FALSE-----------------------------------
 ccl4_vapor_grouped[, set := 'CCL4']

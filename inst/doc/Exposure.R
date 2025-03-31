@@ -57,10 +57,6 @@ exp_fun_use_cat <- get_exposure_functional_use_category()
 knitr::kable(head(exp_fun_use_cat))
 
 ## -----------------------------------------------------------------------------
-bpa_httk <- get_httk_data(DTXSID = 'DTXSID7020182')
-head(bpa_httk)
-
-## -----------------------------------------------------------------------------
 exp_prod_dat <- get_exposure_product_data(DTXSID = 'DTXSID7020182')
 
 ## ----echo=FALSE---------------------------------------------------------------
@@ -73,6 +69,10 @@ exp_prod_data_puc <- get_exposure_product_data_puc()
 
 ## ----echo=FALSE---------------------------------------------------------------
 knitr::kable(head(exp_prod_data_puc))
+
+## -----------------------------------------------------------------------------
+bpa_httk <- get_httk_data(DTXSID = 'DTXSID7020182')
+head(bpa_httk)
 
 ## -----------------------------------------------------------------------------
 exp_list_tags <- get_exposure_list_presence_tags()

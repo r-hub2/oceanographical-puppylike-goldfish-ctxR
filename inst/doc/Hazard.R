@@ -37,25 +37,25 @@ registerS3method(
 )
 
 ## ----ctxR all hazard, message=FALSE, eval=FALSE-------------------------------
-#  hazard_by_dtxsid <- get_hazard_by_dtxsid(DTXSID = 'DTXSID7020182')
+# hazard_by_dtxsid <- get_hazard_by_dtxsid(DTXSID = 'DTXSID7020182')
 
 ## ----ctxR human hazard, message=FALSE, eval=FALSE-----------------------------
-#  human_hazard_by_dtxsid <- get_human_hazard_by_dtxsid(DTXSID = 'DTXSID7020182')
+# human_hazard_by_dtxsid <- get_human_hazard_by_dtxsid(DTXSID = 'DTXSID7020182')
 
 ## ----ctxR ecotox hazard, message=FALSE, eval=FALSE----------------------------
-#  ecotox_hazard_by_dtxsid <- get_ecotox_hazard_by_dtxsid(DTXSID = 'DTXSID7020182')
+# ecotox_hazard_by_dtxsid <- get_ecotox_hazard_by_dtxsid(DTXSID = 'DTXSID7020182')
 
 ## ----ctxR skin and eye hazard, message=FALSE, eval=FALSE----------------------
-#  skin_eye_hazard <- get_skin_eye_hazard(DTXSID = 'DTXSID7020182')
+# skin_eye_hazard <- get_skin_eye_hazard(DTXSID = 'DTXSID7020182')
 
 ## ----ctxR cancer hazard, message=FALSE, eval=FALSE----------------------------
-#  cancer_hazard <- get_cancer_hazard(DTXSID = 'DTXSID7020182')
+# cancer_hazard <- get_cancer_hazard(DTXSID = 'DTXSID7020182')
 
 ## ----ctxR genetox summary hazard, message=FALSE, eval=FALSE-------------------
-#  genetox_summary <- get_genetox_summary(DTXSID = 'DTXSID7020182')
+# genetox_summary <- get_genetox_summary(DTXSID = 'DTXSID7020182')
 
 ## ----ctxR genetox detail hazard, message=FALSE, eval=FALSE--------------------
-#  genetox_details <- get_genetox_details(DTXSID = 'DTXSID7020182')
+# genetox_details <- get_genetox_details(DTXSID = 'DTXSID7020182')
 
 ## -------------------------------------------------------------------------------------------------
 options(width = 100)
@@ -138,14 +138,14 @@ ccl4_genetox_details[dtxsid == 'DTXSID0020153' & assayResult == 'positive',
                      .(Number_of_assays = .N), by = .(assayType)][order(-Number_of_assays),]
 
 ## ----eval = FALSE---------------------------------------------------------------------------------
-#  ccl4_hazard <- get_hazard_by_dtxsid_batch(DTXSID = ccl4$dtxsid)
-#  natadb_hazard <- get_hazard_by_dtxsid_batch(DTXSID = natadb$dtxsid)
+# ccl4_hazard <- get_hazard_by_dtxsid_batch(DTXSID = ccl4$dtxsid)
+# natadb_hazard <- get_hazard_by_dtxsid_batch(DTXSID = natadb$dtxsid)
 
 ## ----eval = FALSE, fig.align='center',class.source="scroll-300",message=FALSE---------------------
-#  dim(ccl4_hazard)
-#  dim(natadb_hazard)
-#  colnames(ccl4_hazard)
-#  head(ccl4_hazard)
+# dim(ccl4_hazard)
+# dim(natadb_hazard)
+# colnames(ccl4_hazard)
+# head(ccl4_hazard)
 
 ## ----breakdown, echo = FALSE, results = 'hide'--------------------------------
 # This chunk will be hidden in the final product. It serves to undo defining the

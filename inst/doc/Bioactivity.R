@@ -56,7 +56,7 @@ knitr::kable(head(assays))%>%
  kableExtra::scroll_box(width = "100%", height="400px")
 
 ## ----ctxR all assays, message=FALSE, eval=FALSE-------------------------------
-#  all_assays <- get_all_assays()
+# all_assays <- get_all_assays()
 
 ## ----ctxR summary by aeid, message=FALSE--------------------------------------
 summary <- get_bioactivity_summary(AEID = "891")
@@ -106,7 +106,7 @@ knitr::kable(head(aeid_data))%>%
  kableExtra::scroll_box(width = "100%",  height="400px")
 
 ## ----ctxR data by aeid batch, message=FALSE, eval=FALSE-----------------------
-#  aeid_data_batch <- get_bioactivity_details_batch(AEID = c(759,700,891))
+# aeid_data_batch <- get_bioactivity_details_batch(AEID = c(759,700,891))
 
 ## ----breakdown, echo = FALSE, results = 'hide'--------------------------------
 # This chunk will be hidden in the final product. It serves to undo defining the

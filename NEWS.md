@@ -1,7 +1,19 @@
 # ctxR (development version)
 
+## Minor improvements and fixes
+
+* Updated roles in `DESCRIPTION` file (#48).
+
+# ctxR 1.1.0
+
 
 ## Minor improvements and fixes
+
+* Updated moved URLs per CRAN request (#40).
+
+* Updated exposition, corrected typos, and added references to the vignettes (#37).
+
+* Fixed broken link to `CONTRIBUTING.md` in README (@c1au6i0, #37)
 
 * Updated `get_chemical_synonym()`, `get_chemical_synonym_batch()` to handle returned data more efficiently (#30).
 

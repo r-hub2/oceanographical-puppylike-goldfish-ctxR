@@ -1,8 +1,14 @@
-# ctxR (development version)
+# ctxR 1.1.2
 
 ## Minor improvements and fixes
 
-* Updated roles in `DESCRIPTION` file (#48).
+* Updated roles in `DESCRIPTION` file and Roxygen version (#55).
+
+# ctxR 1.1.1
+
+## Minor improvements and fixes
+
+* Updated roles in `DESCRIPTION` file (#55).
 
 # ctxR 1.1.0
 

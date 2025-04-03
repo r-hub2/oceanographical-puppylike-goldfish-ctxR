@@ -1,7 +1,7 @@
 Type: Package
 Package: ctxR
 Title: Utilities for Interacting with the 'CTX' APIs
-Version: 1.1.0
+Version: 1.1.1
 Authors@R: c(
             person("Paul", "Kruse", email = "kruse.paul@epa.gov", 
               role = c("aut", "cre"), 
@@ -32,7 +32,7 @@ Imports: cli, data.table, httr, jsonlite, purrr, rlang, stringr, tidyr,
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 Suggests: countcolors, devtools, DT, ggplot2, gridExtra, htmlTable,
         httptest, kableExtra, knitr, prettydoc, rmarkdown, rmdformats,
         testthat (>= 3.0.0), XML
@@ -42,7 +42,7 @@ VignetteBuilder: knitr
 Config/testthat/edition: 3
 Depends: R (>= 2.10)
 NeedsCompilation: no
-Packaged: 2025-03-31 15:12:44 UTC; PKRUSE
+Packaged: 2025-04-03 15:46:38 UTC; PKRUSE
 Author: Paul Kruse [aut, cre] (<https://orcid.org/0000-0001-5516-9717>),
   Caroline Ring [aut] (<https://orcid.org/0000-0002-0463-1251>),
   Madison Feshuk [ctb] (<https://orcid.org/0000-0002-1390-6405>),
